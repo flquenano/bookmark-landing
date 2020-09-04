@@ -1,0 +1,49 @@
+html {
+  font-size: $font-size;
+  font-family: $font-rubik;
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+img {
+  max-width: 100%;
+}
+
+ul,
+body,
+h1,
+p {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+h1 {
+  color: $neutral-dark-blue;
+}
+
+body {
+  background: $neutral-white;
+}
+
+#root {
+  position: relative;
+  margin: 0 auto;
+  max-width: 1440px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: -5px 0 10px rgb(230, 230, 230), 5px 0 10px rgb(230, 230, 230);
+}

@@ -1,0 +1,88 @@
+@import "sass/variables";
+@import "sass/mixins";
+
+.intro {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 7.8rem;
+  @include md {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 3rem;
+  }
+  &__display {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 3rem;
+    @include md {
+      order: 2;
+      width: 60%;
+    }
+    &-img {
+      width: clamp(20rem, 80%, 36.5rem);
+      @include md {
+        width: 36.5rem;
+      }
+    }
+    .tablet {
+      height: 80%;
+      top: 23%;
+      left: 20%;
+      border-radius: 200px 0 0 200px;
+      @include md {
+        top: 30%;
+        left: 35%;
+        height: 76%;
+      }
+    }
+  }
+  &__context {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: clamp(17rem, 80%, 30rem);
+    @include md {
+      order: 1;
+      text-align: start;
+      padding-left: 3.25rem;
+      padding-top: 4.25rem;
+      margin-left: 6rem;
+      align-self: flex-start;
+      justify-content: flex-start;
+      width: 45%;
+    }
+    &-heading {
+      margin-bottom: 1rem;
+      @include md {
+        // width: clamp(22rem, 25.39rem, 90%);
+        margin-bottom: 1.25rem;
+      }
+    }
+    &-text {
+      margin-bottom: 1.75rem;
+      @include md {
+        // width: 90%;
+        // margin-left: 3rem;
+        margin-bottom: 2rem;
+      }
+    }
+    &-btn-group {
+      display: flex;
+      justify-content: space-between;
+      .btn:not(:last-child) {
+        margin-right: 0.5rem;
+      }
+      @include md {
+        align-self: flex-start;
+        // margin-left: 3rem;
+      }
+    }
+  }
+}

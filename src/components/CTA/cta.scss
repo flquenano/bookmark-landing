@@ -1,0 +1,105 @@
+@import "sass/variables";
+@import "sass/mixins";
+
+.cta {
+  background: $primary-soft-blue;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 4rem;
+  position: relative;
+  &__content {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 85%;
+    width: clamp(17rem, 80%, 24.5rem);
+  }
+  &__text {
+    color: $neutral-white;
+    font-size: 0.67rem;
+    font-weight: $font-medium;
+    letter-spacing: 4.62px;
+    line-height: 40px;
+    text-transform: uppercase;
+    @include md {
+      font-size: 0.72rem;
+      line-height: 40px;
+      letter-spacing: 5px;
+    }
+  }
+  &__heading {
+    color: $neutral-white;
+    font-size: 1.33rem;
+    font-weight: $font-medium;
+    margin-bottom: 2rem;
+    @include md {
+      font-size: 1.78rem;
+      line-height: 40px;
+      letter-spacing: -0.1px;
+    }
+  }
+  &__form {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    width: 100%;
+    @include md {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: flex-start;
+    }
+    &-warning {
+      position: relative;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      &-text {
+        position: absolute;
+        font-size: 0.6rem;
+        letter-spacing: 0.25px;
+        background: $primary-soft-red;
+        font-weight: $font-medium;
+        font-style: italic;
+        border: 1px solid $primary-soft-red;
+        color: $neutral-white;
+        top: 2.75rem;
+        padding: 0.5rem;
+        text-align: start;
+        width: 100%;
+        border-bottom-right-radius: 5px;
+        border-bottom-left-radius: 5px;
+      }
+      @include md {
+        width: 70%;
+      }
+    }
+    &-input {
+      font-size: 0.77rem;
+      font-weight: $font-regular;
+      line-height: 28px;
+      letter-spacing: 0.25px;
+      padding: 0.5rem 1rem;
+      border-radius: 4px;
+      margin-bottom: 2.75rem;
+      border: 3px solid $primary-soft-red;
+      width: 100%;
+      background: $neutral-white url("assets/icon-error.svg") center right 1rem /
+        20px no-repeat;
+    }
+    &-btn {
+      padding: 0.75rem 1rem;
+      margin-bottom: 2rem;
+      font-size: 0.85rem;
+      background: $primary-soft-red;
+      color: $neutral-white;
+      border-radius: 5px;
+      @include md {
+        padding: 0.5rem 1rem;
+      }
+    }
+  }
+}

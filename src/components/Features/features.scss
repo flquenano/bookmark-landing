@@ -1,0 +1,118 @@
+@import "sass/variables";
+@import "sass/mixins";
+
+.features-header {
+  position: relative;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto 2.5rem;
+  width: clamp(17rem, 80%, 30rem);
+  @include md {
+    &__heading {
+      margin-bottom: 0.75rem;
+    }
+  }
+}
+
+.features-tabs {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto 7.5rem;
+  width: 100%;
+  @include md {
+    margin: 0 auto 9rem;
+  }
+  &__radio {
+    display: none;
+    &:checked + .features-tabs__selectors-heading {
+      // border-color: $primary-soft-red;
+      border-bottom: 4px solid $primary-soft-red;
+    }
+  }
+  &__selectors {
+    width: clamp(17rem, 80%, 40.56rem);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 4.5rem;
+    @include tablet-ls {
+      flex-direction: row;
+    }
+    @include custom-max(767) {
+      &-heading:nth-child(1) {
+        border-top: 1px solid $neutral-line;
+      }
+    }
+    &-heading {
+      width: 100%;
+      font-size: 0.88rem;
+      padding: 1rem 0;
+      border-bottom: 1px solid $neutral-line;
+      line-height: 17px;
+      letter-spacing: 0.53px;
+      font-weight: $font-regular;
+      transition: all 100ms;
+      display: flex;
+      justify-content: center;
+    }
+  }
+
+  &__content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @include md {
+      flex-direction: row;
+      justify-content: center;
+      align-items: flex-start;
+    }
+  }
+  &__display {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 4rem;
+    .tablet {
+      height: 100%;
+      top: 15%;
+      right: 20%;
+      border-radius: 0px 200px 200px 0px;
+      @include md {
+        top: 24.5%;
+        right: 12.5%;
+      }
+    }
+    &-img {
+      width: clamp(17.5rem, 80%, 30rem);
+      @include md {
+        width: 100%;
+        margin-left: 1rem;
+      }
+    }
+  }
+  &__context {
+    text-align: center;
+    width: clamp(17rem, 80%, 24.7rem);
+    & .text {
+      margin-bottom: 1.5rem;
+    }
+    /*
+    &-tab{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      @include sm{
+        align-items: flex-start
+      }
+    }
+    */
+  }
+}

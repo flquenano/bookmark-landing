@@ -1,0 +1,115 @@
+@import "sass/variables";
+@import "sass/mixins";
+
+header {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 82.5%;
+  padding-top: 2.25rem;
+  margin-bottom: 4rem;
+  &__mobile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    &-background {
+      left: 0;
+      top: 0;
+      padding-top: 2.25rem;
+      position: fixed;
+      background: rgba(36, 42, 69, 0.95);
+      width: 100vw;
+      height: 100vh;
+      // display: flex;
+      flex-direction: column;
+      align-items: center;
+      overflow: scroll;
+      display: none;
+    }
+    &-header {
+      width: clamp(17.16rem, 82.5%, 24rem);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 2.25rem;
+    }
+    &-list {
+      width: clamp(17.16rem, 82.5%, 24rem);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding-bottom: 12.25rem;
+    }
+    &-item {
+      width: 100%;
+      font-size: 1.11rem;
+      font-weight: $font-regular;
+      line-height: 17px;
+      letter-spacing: 2.31px;
+      text-transform: uppercase;
+      padding: 1.3rem 0;
+      text-align: center;
+      color: $neutral-white;
+      &:first-child {
+        border-top: 1px solid rgba(255, 255, 255, 0.15);
+      }
+      &:not(:last-child) {
+        border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+      }
+      &:last-child {
+        margin-top: 1.5rem;
+        border: 2px solid $neutral-white;
+        padding: 0.75rem 0;
+        border-radius: 5px;
+      }
+    }
+    &-footer {
+      width: 22.25%;
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+  &__desktop {
+    display: none;
+  }
+  // justify-content: space-between;
+  // align-items: center;
+  // padding: 2.25rem 1.75rem 4rem;
+  // @include md {
+  //   padding: 2.5rem 9.5rem 6rem;
+  // }
+
+  // &__logo {
+  //   width: 8.27rem;
+  // }
+  // &__list {
+  //   display: flex;
+  //   align-items: baseline;
+  //   font-size: 0.72rem;
+  //   line-height: 17px;
+  //   letter-spacing: 1.5px;
+  //   text-transform: uppercase;
+  //   &-item:not(:last-child) {
+  //     padding-right: 2.5rem;
+  //   }
+  //   &-item:last-child {
+  //     padding: 0.7rem 1.75rem;
+  //     background: $primary-soft-red;
+  //     border-radius: 5px;
+  //     color: $neutral-white;
+  //   }
+  // }
+  // &__mobile {
+  //   display: none;
+  // }
+}
+
+#nav__checkbox {
+  display: none;
+}

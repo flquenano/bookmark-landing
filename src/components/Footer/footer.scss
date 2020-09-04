@@ -1,0 +1,37 @@
+@import "sass/variables";
+@import "sass/mixins";
+
+.footer {
+  background: $neutral-dark-blue;
+  color: $neutral-white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 3rem 0;
+  &__logo {
+    fill: $neutral-white;
+    width: 8.22rem;
+    background: $neutral-white;
+  }
+  &__nav {
+    font-size: 0.83rem;
+    text-transform: uppercase;
+    margin: 2rem;
+    text-align: center;
+    &-item {
+      line-height: 17px;
+      letter-spacing: 1.73px;
+      &:not(:last-child) {
+        margin-bottom: 1.78rem;
+      }
+    }
+  }
+
+  &__sns {
+    &-item {
+      &:not(:last-child) {
+        padding-right: 2rem;
+      }
+    }
+  }
+}

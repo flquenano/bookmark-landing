@@ -1,0 +1,66 @@
+.heading {
+  font-size: clamp(1.33rem, 4vw, 1.78rem);
+  font-weight: $font-medium;
+  line-height: 52px;
+  letter-spacing: -0.08px;
+  @include sm {
+    line-height: 52px;
+    letter-spacing: -0.1px;
+  }
+}
+
+.heading-intro {
+  font-size: clamp(1.67rem, 4vw, 2.67rem);
+  font-weight: $font-medium;
+  line-height: 40px;
+  letter-spacing: -0.09px;
+  @include sm {
+    line-height: 52px;
+    letter-spacing: -0.15px;
+  }
+}
+
+.text {
+  font-size: clamp(0.83rem, 1.5vw, 1rem);
+  line-height: 25px;
+  @include sm {
+    line-height: 28px;
+  }
+}
+
+.bold {
+  @include md {
+    font-weight: $font-bold;
+  }
+}
+
+.btn {
+  font-size: 0.78rem;
+  font-weight: $font-medium;
+  font-family: $font-rubik;
+  white-space: nowrap;
+  line-height: 28px;
+  letter-spacing: 0.25px;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 8px;
+  color: $neutral-dark-blue;
+
+  @include md {
+    padding: 0.6rem 1.5rem;
+  }
+}
+
+.btn-dark {
+  background: $primary-soft-blue;
+  color: $neutral-white;
+}
+
+.tablet {
+  position: absolute;
+  background: $primary-soft-blue;
+  height: 80%;
+  width: 100vw;
+  // breakpoint for 1440px
+  z-index: -1;
+}
