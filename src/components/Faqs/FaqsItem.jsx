@@ -8,7 +8,7 @@ const FaqsItem = ({ idx, title, text }) => (
       className="faqs__item-show"
       id={`show-${idx}`}
     />
-    <label for={`show-${idx}`} className="faqs__item-title">
+    <label htmlFor={`show-${idx}`} className="faqs__item-title">
       <h1 className="faqs__item-heading">{title}</h1>
     </label>
     <div className="faqs__item-body">

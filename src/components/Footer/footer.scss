@@ -7,22 +7,57 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 3rem 0;
+  // padding: 2.25rem 0;
+  padding-top: 2.25rem;
+  padding-bottom: 2.25rem;
+  @include sm {
+    padding: 0;
+  }
+  &__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @include sm {
+      width: clamp(375px, 80%, 1100px);
+      padding: 0;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+    }
+  }
   &__logo {
-    fill: $neutral-white;
-    width: 8.22rem;
-    background: $neutral-white;
+    & > g > path {
+      fill: $neutral-white;
+    }
   }
   &__nav {
     font-size: 0.83rem;
     text-transform: uppercase;
-    margin: 2rem;
+    margin: 2.25rem 0 2.25rem;
     text-align: center;
+    @include sm {
+      margin: 2.05rem 0;
+      text-align: start;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      align-self: flex-start;
+      margin-right: 40%;
+    }
     &-item {
       line-height: 17px;
       letter-spacing: 1.73px;
+      &:hover {
+        cursor: pointer;
+        color: $primary-soft-red;
+        transition: all 250ms;
+      }
       &:not(:last-child) {
         margin-bottom: 1.78rem;
+        @include sm {
+          margin-bottom: 0;
+          margin-right: 2rem;
+        }
       }
     }
   }
@@ -30,7 +65,7 @@
   &__sns {
     &-item {
       &:not(:last-child) {
-        padding-right: 2rem;
+        margin-right: 2.125rem;
       }
     }
   }

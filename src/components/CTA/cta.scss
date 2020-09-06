@@ -7,8 +7,12 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-top: 4rem;
+  padding-top: 3rem;
+  padding-bottom: 1.5rem;
   position: relative;
+  @include sm {
+    padding-bottom: 2rem;
+  }
   &__content {
     text-align: center;
     display: flex;
@@ -24,7 +28,8 @@
     letter-spacing: 4.62px;
     line-height: 40px;
     text-transform: uppercase;
-    @include md {
+    @include sm {
+      margin-bottom: 1.75rem;
       font-size: 0.72rem;
       line-height: 40px;
       letter-spacing: 5px;
@@ -32,11 +37,14 @@
   }
   &__heading {
     color: $neutral-white;
-    font-size: 1.33rem;
+    font-size: clamp(1.33rem, 4vw, 1.78rem);
     font-weight: $font-medium;
+    letter-spacing: -0.08px;
+    line-height: 28px;
+    width: clamp(17rem, 80%, 23.5);
     margin-bottom: 2rem;
-    @include md {
-      font-size: 1.78rem;
+    @include sm {
+      // font-size: ;
       line-height: 40px;
       letter-spacing: -0.1px;
     }
@@ -84,21 +92,32 @@
       letter-spacing: 0.25px;
       padding: 0.5rem 1rem;
       border-radius: 4px;
-      margin-bottom: 2.75rem;
-      border: 3px solid $primary-soft-red;
+      margin-bottom: 1rem;
       width: 100%;
-      background: $neutral-white url("assets/icon-error.svg") center right 1rem /
-        20px no-repeat;
+      border: none;
+      &-warning {
+        background: $neutral-white url("assets/icon-error.svg") center right
+          1rem / 20px no-repeat;
+        border: 3px solid $primary-soft-red;
+        margin-bottom: 2.75rem;
+      }
     }
+
     &-btn {
-      padding: 0.75rem 1rem;
+      padding: 0.5rem 1rem;
       margin-bottom: 2rem;
       font-size: 0.85rem;
       background: $primary-soft-red;
       color: $neutral-white;
+      border: 2px solid $primary-soft-red !important;
       border-radius: 5px;
       @include md {
         padding: 0.5rem 1rem;
+      }
+      &:hover {
+        cursor: pointer;
+        background: $neutral-white;
+        color: $primary-soft-red;
       }
     }
   }

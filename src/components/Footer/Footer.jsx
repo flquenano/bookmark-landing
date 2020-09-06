@@ -1,21 +1,23 @@
 import React from "react";
 import "./footer.scss";
 
-import Logo from "assets/logo-bookmark.svg";
+import { ReactComponent as Logo } from "assets/logo-bookmark.svg";
 import Facebook from "assets/icon-facebook.svg";
 import Twitter from "assets/icon-twitter.svg";
 
 const Footer = () => (
-  <footer class="footer">
-    <img src={Logo} alt="Footer Logo" class="footer__logo" />
-    <ul class="footer__nav">
-      <li class="footer__nav-item">Features</li>
-      <li class="footer__nav-item">Pricing</li>
-      <li class="footer__nav-item">Contact</li>
-    </ul>
-    <div class="footer__sns">
-      <img src={Facebook} alt="Facebook" class="footer__sns-item" />
-      <img src={Twitter} alt="Twitter" class="footer__sns-item" />
+  <footer className="footer">
+    <div className="footer__container">
+      <Logo className="footer__logo" />
+      <ul className="footer__nav">
+        <li className="footer__nav-item">Features</li>
+        <li className="footer__nav-item">Pricing</li>
+        <li className="footer__nav-item">Contact</li>
+      </ul>
+      <div className="footer__sns">
+        <img src={Facebook} alt="Facebook" className="footer__sns-item" />
+        <img src={Twitter} alt="Twitter" className="footer__sns-item" />
+      </div>
     </div>
   </footer>
 );

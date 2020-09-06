@@ -37,7 +37,12 @@ const Addon = () => {
       </div>
       <div className="addon__content">
         {Items.map((item) => (
-          <AddonItem Logo={item.Logo} name={item.name} ver={item.ver} />
+          <AddonItem
+            key={item.name.replace(" ", "")}
+            Logo={item.Logo}
+            name={item.name}
+            ver={item.ver}
+          />
         ))}
       </div>
     </div>

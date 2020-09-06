@@ -8,12 +8,18 @@
   flex-direction: column;
   align-items: center;
   margin-bottom: 7.75rem;
+  @include sm {
+    margin-bottom: 9rem;
+  }
   &__header {
     text-align: center;
     width: clamp(17rem, 80%, 30rem);
   }
   &__heading {
-    margin-bottom: 1rem;
+    margin-bottom: 0rem;
+    @include sm {
+      margin-bottom: 1rem;
+    }
   }
   &__content {
     width: 100%;
@@ -43,11 +49,12 @@
       padding-top: 3rem;
     }
     &-img {
-      margin-bottom: 2rem;
+      margin-bottom: 1.5rem;
     }
     &-heading {
       font-size: 1.11rem;
       letter-spacing: 0.25px;
+      margin-bottom: 0.5rem;
     }
     &-text {
       font-size: 0.833rem;
@@ -55,7 +62,6 @@
       margin-bottom: 3.5rem;
     }
     &-btn {
-      border-top: 2px dotted $neutral-line;
       padding: 0.5rem 2rem;
       margin-bottom: 1.25rem;
     }

@@ -45,15 +45,26 @@
   border: none;
   border-radius: 8px;
   color: $neutral-dark-blue;
-
+  transition: all 150ms;
   @include md {
     padding: 0.6rem 1.5rem;
+  }
+  &:hover {
+    cursor: pointer;
+    color: $neutral-dark-blue;
+    border: 2px solid $neutral-dark-blue;
+    background-color: $neutral-white;
   }
 }
 
 .btn-dark {
   background: $primary-soft-blue;
+  border: 2px solid $primary-soft-blue !important;
   color: $neutral-white;
+  &:hover {
+    color: $primary-soft-blue !important;
+    background: $neutral-white !important;
+  }
 }
 
 .tablet {

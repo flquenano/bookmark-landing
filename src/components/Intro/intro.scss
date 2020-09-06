@@ -13,6 +13,9 @@
     align-items: center;
     margin-bottom: 3rem;
   }
+  .bold {
+    font-weight: $font-bold;
+  }
   &__display {
     position: relative;
     display: flex;

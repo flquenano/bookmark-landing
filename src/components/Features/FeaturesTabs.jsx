@@ -9,9 +9,11 @@ import IlluThree from "assets/illustration-features-tab-3.svg";
 
 const Tabs = () => {
   const [tab, setTab] = useState(0);
+  const [active, setActive] = useState(0);
 
   const changeTab = (tabNum) => {
     setTab(tabNum);
+    setActive(tabNum);
   };
 
   const selectors = ["Simple Bookmarking", "Speedt Searching", "Easy Sharing"];
@@ -43,6 +45,9 @@ const Tabs = () => {
             text={selector}
             key={idx}
             changeTab={() => changeTab(idx)}
+            isActive={
+              active === idx ? "features-tabs__selectors-heading-active" : ""
+            }
           />
         ))}
       </div>

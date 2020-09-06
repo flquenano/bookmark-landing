@@ -7,8 +7,11 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 0 auto 2.5rem;
+  margin: 0 auto 2.25rem;
   width: clamp(17rem, 80%, 30rem);
+  @include sm {
+    margin-bottom: 3rem;
+  }
   @include md {
     &__heading {
       margin-bottom: 0.75rem;
@@ -17,14 +20,14 @@
 }
 
 .features-tabs {
+  width: clamp(375px, 90%, 1110px);
   position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 0 auto 7.5rem;
-  width: 100%;
+  margin: 0 auto 4rem;
   @include md {
-    margin: 0 auto 9rem;
+    margin: 0 auto 9.75rem;
   }
   &__radio {
     display: none;
@@ -39,7 +42,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-bottom: 4.5rem;
+    margin-bottom: 4rem;
     @include tablet-ls {
       flex-direction: row;
     }
@@ -48,10 +51,12 @@
         border-top: 1px solid $neutral-line;
       }
     }
+    @include sm {
+      margin-bottom: 2.75rem;
+    }
     &-heading {
       width: 100%;
       font-size: 0.88rem;
-      padding: 1rem 0;
       border-bottom: 1px solid $neutral-line;
       line-height: 17px;
       letter-spacing: 0.53px;
@@ -59,6 +64,20 @@
       transition: all 100ms;
       display: flex;
       justify-content: center;
+      padding: 1rem 0 1.25rem;
+      &-active {
+        border-bottom: 3px solid $primary-soft-red;
+      }
+      &:hover {
+        cursor: pointer;
+        color: $primary-soft-red;
+      }
+      @include tablet-ls {
+        padding: 1rem 0 2rem;
+      }
+      @include sm {
+        margin-bottom: 1rem;
+      }
     }
   }
 
@@ -79,22 +98,25 @@
     flex-direction: column;
     align-items: center;
     text-align: center;
-    margin-bottom: 4rem;
+    margin-bottom: 3.5rem;
+    @include sm {
+      width: 50%;
+    }
     .tablet {
       height: 100%;
       top: 15%;
       right: 20%;
       border-radius: 0px 200px 200px 0px;
       @include md {
-        top: 24.5%;
-        right: 12.5%;
+        height: 352px;
+        top: 25%;
+        right: 15%;
       }
     }
     &-img {
       width: clamp(17.5rem, 80%, 30rem);
-      @include md {
-        width: 100%;
-        margin-left: 1rem;
+      @include sm {
+        width: auto;
       }
     }
   }
@@ -102,17 +124,19 @@
     text-align: center;
     width: clamp(17rem, 80%, 24.7rem);
     & .text {
-      margin-bottom: 1.5rem;
+      margin-bottom: 1.25rem;
     }
-    /*
-    &-tab{
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      @include sm{
-        align-items: flex-start
+    @include sm {
+      & .heading {
+        margin-bottom: 1rem;
       }
+      & .text {
+        margin-bottom: 1.75rem;
+      }
+      width: 50%;
+      margin-top: 3rem;
+      text-align: start;
+      padding-left: 6rem;
     }
-    */
   }
 }
